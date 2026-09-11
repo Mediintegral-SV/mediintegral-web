@@ -3,63 +3,62 @@ import { Button } from "@/components/ui/button"
 import { ShieldCheck } from "lucide-react"
 
 export function Hero() {
+  const whatsappUrl = "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta."
+
   return (
-    <section id="inicio" className="relative overflow-hidden py-16 md:py-24 lg:py-32">
+    <section className="relative overflow-hidden py-16 md:py-24 bg-gradient-to-b from-emerald-50/50 to-white">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           
-          {/* Columna de Texto */}
-          <div className="flex flex-col items-start lg:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-medium text-primary">
-              <ShieldCheck className="h-4 w-4" />
-              <span>Espacio seguro y confidencial</span>
+          {/* Textos y botones de la izquierda */}
+          <div className="flex flex-col items-start text-left">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100/80 px-3.5 py-1 text-xs font-semibold text-emerald-800 border border-emerald-200 shadow-sm">
+              <ShieldCheck className="h-4 w-4 text-emerald-600" />
+              Espacio seguro y confidencial
             </div>
 
-            <h1 className="mt-6 font-serif text-4xl font-bold tracking-tight text-foreground sm:text-5xl xl:text-6xl text-balance">
+            <h1 className="mt-4 font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl leading-[1.1]">
               Atención Integral para tu Bienestar Emocional y Mental
             </h1>
 
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
+            <p className="mt-4 text-base md:text-lg text-slate-600 leading-relaxed">
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
-            {/* Botones actualizados */}
-            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-              
-              {/* BOTÓN PRINCIPAL: Fondo Verde, Texto Azul Corporativo (sin flecha) */}
-              <Button asChild size="lg" className="px-10 py-6 text-base shadow-md bg-primary text-blue-950 hover:bg-primary/90 font-semibold">
-                <a href="#contacto">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-lg">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   Agendar Consulta
                 </a>
               </Button>
-
-              {/* BOTÓN SECUNDARIO: Estilo Outline (Borde verde por defecto) */}
-              <Button asChild variant="outline" size="lg" className="px-10 py-6 text-base">
-                <a href="#especialidades">Conocer Servicios</a>
+              <Button asChild variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+                <a href="#servicios">
+                  Conocer Servicios
+                </a>
               </Button>
             </div>
           </div>
 
-          {/* Columna de Imagen */}
-          <div className="relative lg:col-span-5">
-            <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-3xl shadow-xl lg:max-w-none">
+          {/* Imagen de la derecha (Aquí se mostrará tu foto del consultorio) */}
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-slate-100">
               <Image
-                src="/hero-img.jpg"
-                alt="Consultorio psicológico acogedor y seguro en MediIntegral"
+                src="/hero-consultorio.jpg" // <--- Aquí busca el nombre del archivo que guardaste en public/
+                alt="Consultorio psicológico acogedor y seguro en Medintegral"
                 fill
                 priority
                 className="object-cover"
               />
             </div>
 
-            {/* Insignia flotante */}
-            <div className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 rounded-2xl border border-border bg-card p-4 shadow-lg">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary font-bold text-lg">
+            {/* Tarjeta flotante decorativa de años de experiencia */}
+            <div className="absolute -bottom-6 -left-6 sm:left-4 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-800 font-bold text-lg">
                 +10
               </div>
-              <div>
-                <p className="font-semibold text-foreground">Años</p>
-                <p className="xs text-muted-foreground">acompañando personas</p>
+              <div className="text-xs font-semibold text-slate-800 leading-tight">
+                Años <br />
+                <span className="text-slate-500 font-normal">acompañando personas</span>
               </div>
             </div>
           </div>
