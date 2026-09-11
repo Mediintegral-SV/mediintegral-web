@@ -5,7 +5,7 @@ import { ShieldCheck, Users } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-emerald-50/40 via-white to-slate-50/60">
+    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-emerald-100/70 via-teal-50/50 to-emerald-50/80">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           
@@ -32,7 +32,7 @@ export function Hero() {
                 </a>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-medium transition-all shadow-sm">
+              <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50/80 font-medium transition-all shadow-sm">
                 <Link href="#servicios">
                   Conocer Servicios
                 </Link>
@@ -66,7 +66,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-emerald-100/50 blur-3xl pointer-events-none" />
+            <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-emerald-200/60 blur-3xl pointer-events-none" />
           </div>
 
         </div>
