@@ -1,3 +1,5 @@
+"use client" // Asegúrate de incluir esto al inicio si tu proyecto usa componentes de cliente de Next.js
+
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -75,6 +77,12 @@ export function Contact() {
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-lg shadow-primary/5 md:p-8">
             <form action="https://formspree.io/f/xnpqwgwl" method="POST" className="flex flex-col gap-5">
+              {/* Redirección tras el envío */}
+              <input type="hidden" name="_next" value="https://mediintegral.com.sv/#contacto" />
+              
+              {/* Campo trampa antispam (los bots lo llenan y Formspree los bloquea automáticamente) */}
+              <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
               <div className="flex flex-col gap-2">
                 <label htmlFor="nombre" className="text-sm font-medium text-foreground">
                   Nombre
