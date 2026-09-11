@@ -2,10 +2,10 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { Team } from "@/components/team"
-import { Benefits } from "@/components/benefits"
+import { MissionVision } from "@/components/mission-vision" // <--- Importamos la nueva sección
 import { Contact } from "@/components/contact"
 import { SiteFooter } from "@/components/site-footer"
-import { FloatingContact } from "@/components/floating-contact" // <--- 1. Importas el botón flotante
+import { FloatingContact } from "@/components/floating-contact"
 
 export default function Page() {
   return (
@@ -14,13 +14,11 @@ export default function Page() {
       <main className="flex-1">
         <Hero />
         <Services />
-        <Benefits />
-        <Team />
+        <Team />          {/* 1. Primero los Licenciados */}
+        <MissionVision /> {/* 2. Debajo la Misión, Visión y Valores */}
         <Contact />
       </main>
       <SiteFooter />
-      
-      {/* 2. Lo colocas aquí para que flote sobre toda la página sin estorbar */}
       <FloatingContact />
     </div>
   )
