@@ -1,4 +1,4 @@
-import { HeartPulse, Globe, AtSign, Send } from "lucide-react"
+import { HeartPulse, Send, Facebook, Video } from "lucide-react"
 
 const quickLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -9,9 +9,21 @@ const quickLinks = [
 ]
 
 const socials = [
-  { icon: Globe, label: "Sitio web", href: "#" },
-  { icon: AtSign, label: "Instagram", href: "#" },
-  { icon: Send, label: "WhatsApp", href: "#" },
+  { 
+    label: "Facebook", 
+    href: "https://www.facebook.com/share/1DyaUMbAgK/?mibextid=wwXIfr", 
+    icon: Facebook 
+  },
+  { 
+    label: "TikTok", 
+    href: "https://www.tiktok.com/@mediintegral?_r=1&_t=ZS-99dHpBlsNEe", 
+    icon: Video 
+  },
+  { 
+    label: "WhatsApp", 
+    href: "https://wa.me/50375687614?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios", 
+    icon: Send 
+  },
 ]
 
 export function SiteFooter() {
@@ -58,6 +70,8 @@ export function SiteFooter() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
                 >
                   <social.icon className="h-5 w-5" aria-hidden="true" />
