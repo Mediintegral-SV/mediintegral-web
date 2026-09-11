@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ShieldCheck } from "lucide-react"
+import { ShieldCheck } from "lucide-react"
 
 export function Hero() {
   return (
@@ -23,16 +23,18 @@ export function Hero() {
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
-            {/* Botones mejorados y más amplios */}
+            {/* Botones actualizados */}
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-              <Button asChild size="lg" className="gap-2 px-8 py-6 text-base shadow-md">
+              
+              {/* BOTÓN PRINCIPAL: Fondo Verde, Texto Azul Corporativo (sin flecha) */}
+              <Button asChild size="lg" className="px-10 py-6 text-base shadow-md bg-primary text-blue-950 hover:bg-primary/90 font-semibold">
                 <a href="#contacto">
                   Agendar Consulta
-                  <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
 
-              <Button asChild variant="outline" size="lg" className="px-8 py-6 text-base">
+              {/* BOTÓN SECUNDARIO: Estilo Outline (Borde verde por defecto) */}
+              <Button asChild variant="outline" size="lg" className="px-10 py-6 text-base">
                 <a href="#especialidades">Conocer Servicios</a>
               </Button>
             </div>
@@ -57,7 +59,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="font-semibold text-foreground">Años</p>
-                <p className="text-xs text-muted-foreground">acompañando personas</p>
+                <p className="xs text-muted-foreground">acompañando personas</p>
               </div>
             </div>
           </div>
