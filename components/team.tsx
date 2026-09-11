@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 const teamMembers = [
-  { 
+  {
     name: "Lic. Johana Carolina Rivera Escalante",
     role: "Psicóloga Infantil",
     image: "/team-1.png",
@@ -35,93 +35,96 @@ const teamMembers = [
 
 export function Team() {
   return (
-    <section id="nosotros" className="relative py-20 md:py-28 overflow-hidden bg-slate-900 text-white">
-      {/* Fondo de naturaleza y capa oscura */}
+    <section id="nosotros" className="relative py-24 md:py-32 overflow-hidden bg-slate-900 text-white">
+      {/* Fondo de naturaleza optimizado con capa de contraste */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/nature-bg.jpg"
           alt="Fondo natural MediIntegral"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center scale-105 filter brightness-90"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 backdrop-blur-[2px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         
-        {/* Cabecera */}
+        {/* Cabecera con estilo de píldora flotante */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-black/40 px-4 py-1.5 rounded-full border border-emerald-500/40 shadow-sm backdrop-blur-md">
-            Nuestro Equipo
-          </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-white md:text-4xl drop-shadow-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 shadow-lg backdrop-blur-md mb-4">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-300">
+              Nuestro Equipo
+            </span>
+          </div>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white drop-shadow-md">
             Licenciados que te acompañan
           </h2>
-          <p className="mt-2 text-sm md:text-base text-slate-200 drop-shadow">
+          <p className="mt-3 text-base md:text-lg text-slate-200/90 font-light drop-shadow">
             Profesionales certificados y comprometidos con tu bienestar integral.
           </p>
         </div>
 
         {/* Tarjetas: Fila superior de 3 */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto mb-6">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-8">
           {teamMembers.slice(0, 3).map((member, index) => (
             <div 
               key={index} 
-              className="flex flex-col justify-between rounded-2xl border border-white/20 bg-white p-5 shadow-2xl transition-all hover:border-emerald-500"
+              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-emerald-500/10"
             >
               <div>
-                <div className="relative h-48 w-full mb-4 overflow-hidden rounded-xl bg-slate-100">
+                <div className="relative h-56 w-full mb-5 overflow-hidden rounded-2xl bg-slate-100 shadow-inner">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-serif text-sm font-bold text-slate-900 leading-snug">{member.name}</h3>
-                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-4">{member.role}</p>
+                <h3 className="font-serif text-base font-bold text-slate-900 leading-snug">{member.name}</h3>
+                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-6">{member.role}</p>
               </div>
 
               <a
                 href={`https://wa.me/${member.whatsapp}?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20${encodeURIComponent(member.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 text-center text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-xl border border-emerald-200 transition-colors"
+                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
               >
-                Agendar cita
+                <span>Agendar cita</span>
               </a>
             </div>
           ))}
         </div>
 
         {/* Tarjetas: Fila inferior de 2 centradas */}
-        <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+        <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
           {teamMembers.slice(3, 5).map((member, index) => (
             <div 
               key={index} 
-              className="flex flex-col justify-between rounded-2xl border border-white/20 bg-white p-5 shadow-2xl transition-all hover:border-emerald-500"
+              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-emerald-500/10"
             >
               <div>
-                <div className="relative h-48 w-full mb-4 overflow-hidden rounded-xl bg-slate-100">
+                <div className="relative h-56 w-full mb-5 overflow-hidden rounded-2xl bg-slate-100 shadow-inner">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-serif text-sm font-bold text-slate-900 leading-snug">{member.name}</h3>
-                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-4">{member.role}</p>
+                <h3 className="font-serif text-base font-bold text-slate-900 leading-snug">{member.name}</h3>
+                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-6">{member.role}</p>
               </div>
 
               <a
                 href={`https://wa.me/${member.whatsapp}?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20${encodeURIComponent(member.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 text-center text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-xl border border-emerald-200 transition-colors"
+                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
               >
-                Agendar cita
+                <span>Agendar cita</span>
               </a>
             </div>
           ))}
