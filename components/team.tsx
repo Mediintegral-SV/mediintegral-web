@@ -4,59 +4,66 @@ import { Button } from "@/components/ui/button"
 const team = [
   {
     image: "/team-1.png",
-    name: "Lic. Johana Rivera",
-    specialty: "Psicóloga Infantil y Juvenil",
+    name: "Lic. Johana Carolina Rivera Escalante",
+    specialty: "Psicóloga Infantil",
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Johana%20Rivera",
   },
   {
     image: "/team-2.png",
-    name: "Lic. Francisco Guevara",
-    specialty: "Psicólogo Clínico",
-    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Francisco%20Guevara",
+    name: "Lic. Luis Eduardo Herrera",
+    specialty: "Psicólogo (Parejas y Adultos)",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Luis%20Eduardo%20Herrera",
   },
   {
     image: "/team-3.png",
-    name: "Lic. Andrea Renderos",
-    specialty: "Especialista en Terapia de Lenguaje",
-    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Andrea%20Renderos",
+    name: "Lic. Yaneth Sorto",
+    specialty: "Licenciada en Psicología",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Yaneth%20Sorto",
   },
   {
-    image: "/team-1.png", // Temporal hasta colocar la 4ta foto oficial
-    name: "Lic. Especialista",
-    specialty: "Psicología Clínica",
-    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20especialista",
+    image: "/team-4.png", // Asegúrate de tener esta imagen en la carpeta public
+    name: "Lic. Karla Jovel",
+    specialty: "Psicología Clínica y Consejería",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Karla%20Jovel",
+  },
+  {
+    image: "/team-1.png", // Imagen temporal o reutilizada para el 5to integrante mientras subes su foto oficial
+    name: "Lic. Francisco Javier Guevara Rojas",
+    specialty: "Especialista en Niños y Adolescentes",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Francisco%20Guevara",
   },
 ]
 
 export function Team() {
   return (
     <section id="nosotros" className="relative scroll-mt-16 overflow-hidden py-16 md:py-24">
-      {/* Fondo de paisaje natural con baja opacidad y desenfoque para descanso visual */}
+      {/* Fondo de naturaleza personalizado con la foto de los árboles y luz */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-img.jpg" // Puedes cambiar esta ruta por una foto de un paisaje natural si lo prefieres
-          alt="Paisaje de fondo natural"
+          src="/nature-bg.jpg" // Nombre del archivo de tu imagen de fondo
+          alt="Fondo natural de bosque y luz"
           fill
-          className="object-cover opacity-15 blur-sm"
+          className="object-cover opacity-20 blur-[2px]"
         />
-        {/* Capa sutil para proteger la lectura y evitar fatiga visual */}
-        <div className="absolute inset-0 bg-background/90" />
+        {/* Capa de luz blanca translúcida para asegurar que no irrite la vista y el texto resalte */}
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">
             Nuestro equipo
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground text-balance md:text-4xl">
+          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-blue-950 text-balance md:text-4xl">
             Licenciados que te acompañan
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
-            Profesionales certificados y comprometidos con tu bienestar.
+            Profesionales certificados y comprometidos con tu bienestar integral.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Cuadrícula para los 5 profesionales */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {team.map((member, index) => (
             <article
               key={index}
@@ -71,12 +78,12 @@ export function Team() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-col gap-4 p-6">
+              <div className="flex flex-col justify-between flex-1 gap-4 p-5">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium">{member.specialty}</p>
+                  <h3 className="text-base font-semibold text-foreground">{member.name}</h3>
+                  <p className="mt-1 text-xs text-primary font-medium leading-relaxed">{member.specialty}</p>
                 </div>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" size="sm" className="w-full text-xs">
                   <a 
                     href={member.whatsappUrl} 
                     target="_blank" 
