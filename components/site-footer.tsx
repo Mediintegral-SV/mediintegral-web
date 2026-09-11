@@ -62,9 +62,9 @@ export function SiteFooter() {
               Conéctate con nosotros en nuestras redes sociales.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              {/* Facebook SVG */}
+              {/* Facebook */}
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/share/1DyaUMbAgK" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -75,9 +75,9 @@ export function SiteFooter() {
                 </svg>
               </a>
 
-              {/* TikTok SVG */}
+              {/* TikTok */}
               <a 
-                href="https://tiktok.com" 
+                href="https://www.tiktok.com/@mediintegral" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="TikTok"
