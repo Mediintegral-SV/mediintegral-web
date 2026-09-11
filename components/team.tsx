@@ -36,10 +36,10 @@ const teamMembers = [
 export function Team() {
   return (
     <section id="nosotros" className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-[#1b4d3e] via-[#13382c] to-[#1b4d3e] text-white">
-      {/* Fondo de los árboles con opacidad suave */}
+      {/* Fondo nature-bg.jpg con opacidad suave */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/team-background.jpg"
+          src="/nature-bg.jpg"
           alt="Fondo natural MediIntegral"
           fill
           className="object-cover object-center opacity-20"
