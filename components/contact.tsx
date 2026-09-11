@@ -35,7 +35,6 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Si ya se está enviando, prevenimos envíos duplicados
     if (isSubmitting) {
       e.preventDefault()
       return
@@ -44,18 +43,21 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="scroll-mt-16 bg-secondary/40 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div className="flex flex-col gap-8">
+    <section id="contacto" className="scroll-mt-16 bg-slate-900/5 py-20 md:py-28 border-t border-cyan-500/15">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-start">
+          
+          {/* Información de contacto */}
+          <div className="flex flex-col gap-8 lg:col-span-5">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-700 bg-cyan-500/10 border border-cyan-500/20 px-4 py-1.5 rounded-full shadow-sm mb-4">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 animate-pulse" />
                 Contacto
-              </p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground text-balance md:text-4xl">
+              </span>
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 md:text-4xl text-balance">
                 Agenda tu cita hoy
               </h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
+              <p className="mt-4 text-base leading-relaxed text-slate-600 text-pretty">
                 Da el primer paso hacia tu bienestar. Completa el formulario o
                 contáctanos directamente y con gusto te atenderemos.
               </p>
@@ -64,22 +66,22 @@ export function Contact() {
             <ul className="flex flex-col gap-5">
               {contactInfo.map((item) => (
                 <li key={item.label} className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cyan-50 text-cyan-700 shadow-sm">
                     <item.icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
-                    <p className="text-sm font-medium text-foreground">{item.label}</p>
+                    <p className="text-sm font-bold text-slate-900">{item.label}</p>
                     {item.href ? (
                       <a
                         href={item.href}
                         target={item.label === "WhatsApp" ? "_blank" : undefined}
                         rel={item.label === "WhatsApp" ? "noopener noreferrer" : undefined}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                        className="text-sm text-slate-600 transition-colors hover:text-cyan-700"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-sm text-muted-foreground">{item.value}</p>
+                      <p className="text-sm text-slate-600">{item.value}</p>
                     )}
                   </div>
                 </li>
@@ -87,7 +89,8 @@ export function Contact() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-6 shadow-lg shadow-primary/5 md:p-8">
+          {/* Formulario de contacto */}
+          <div className="lg:col-span-7 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-cyan-500/5 md:p-8 backdrop-blur-sm">
             <form 
               action="https://formspree.io/f/xnpqwgwl" 
               method="POST" 
@@ -101,7 +104,7 @@ export function Contact() {
               <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="nombre" className="text-sm font-medium text-foreground">
+                <label htmlFor="nombre" className="text-sm font-semibold text-slate-900">
                   Nombre
                 </label>
                 <input
@@ -111,12 +114,12 @@ export function Contact() {
                   required
                   disabled={isSubmitting}
                   placeholder="Tu nombre completo"
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
+                  className="h-11 rounded-xl border border-slate-200 bg-slate-50/50 px-4 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="telefono" className="text-sm font-medium text-foreground">
+                <label htmlFor="telefono" className="text-sm font-semibold text-slate-900">
                   Teléfono
                 </label>
                 <input
@@ -126,12 +129,12 @@ export function Contact() {
                   required
                   disabled={isSubmitting}
                   placeholder="+503 0000-0000"
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
+                  className="h-11 rounded-xl border border-slate-200 bg-slate-50/50 px-4 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="tipo" className="text-sm font-medium text-foreground">
+                <label htmlFor="tipo" className="text-sm font-semibold text-slate-900">
                   Tipo de Terapia
                 </label>
                 <select
@@ -140,7 +143,7 @@ export function Contact() {
                   defaultValue=""
                   required
                   disabled={isSubmitting}
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
+                  className="h-11 rounded-xl border border-slate-200 bg-slate-50/50 px-4 text-sm text-slate-900 outline-none transition-colors focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50"
                 >
                   <option value="" disabled>
                     Selecciona una opción
@@ -153,7 +156,7 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="mensaje" className="text-sm font-medium text-foreground">
+                <label htmlFor="mensaje" className="text-sm font-semibold text-slate-900">
                   Mensaje
                 </label>
                 <textarea
@@ -163,15 +166,21 @@ export function Contact() {
                   required
                   disabled={isSubmitting}
                   placeholder="Cuéntanos brevemente cómo podemos ayudarte"
-                  className="rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
+                  className="rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500/20 disabled:opacity-50 resize-none"
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full h-12 rounded-2xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold tracking-wide shadow-md transition-all duration-200" 
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Enviando solicitud..." : "Enviar Solicitud"}
               </Button>
             </form>
           </div>
+
         </div>
       </div>
     </section>
