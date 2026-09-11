@@ -1,11 +1,12 @@
-export function MissionVision() {
+export function Mission() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-20 md:py-28 bg-slate-50/50">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
-            Nuestra Filosofía
+        {/* Cabecera de la sección */}
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-sm">
+            Nuestra filosofía
           </span>
           <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
             Comprometidos con tu Salud Mental
@@ -15,46 +16,67 @@ export function MissionVision() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        {/* Tarjetas de Misión, Visión, Promesa y Experiencia */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           
-          <div className="rounded-3xl border border-blue-100 bg-blue-50/40 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
-              MISIÓN
-            </h3>
-            <p className="text-slate-700 leading-relaxed text-base">
-              Ayudar a superar condiciones emocionales, a través de bases psicológicas para una mejoría a largo plazo.
-            </p>
+          {/* Misión */}
+          <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all hover:shadow-md">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                  Misión
+                </h3>
+              </div>
+              <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
+                Ayudar a superar condiciones emocionales, a través de bases psicológicas para una mejoría a largo plazo.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-3xl border border-blue-100 bg-blue-50/40 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
-              VISIÓN
-            </h3>
-            <p className="text-slate-700 leading-relaxed text-base">
-              Todos los seres humanos tienen la capacidad innata de sanar sus emociones: nuestro papel es ayudarle a conectar con esa capacidad.
-            </p>
+          {/* Visión */}
+          <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all hover:shadow-md">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                  Visión
+                </h3>
+              </div>
+              <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
+                Todos los seres humanos tienen la capacidad innata de sanar sus emociones: nuestro papel es ayudarle a conectar con esa capacidad.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
-              NUESTRA PROMESA
-            </h3>
-            <p className="text-slate-700 leading-relaxed text-base">
-              Brindar nuestro conocimiento y experiencia a su servicio, con honestidad, respeto y humildad.
-            </p>
+          {/* Nuestra Promesa */}
+          <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all hover:shadow-md">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                  Nuestra Promesa
+                </h3>
+              </div>
+              <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
+                Brindar nuestro conocimiento y experiencia a su servicio, con honestidad, respeto y humildad.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
-              EXPERIENCIA
-            </h3>
-            <p className="text-slate-700 leading-relaxed text-base">
-              Psicólogos clínicos especializados, estamos siempre actualizados sobre los mejores tratamientos disponibles.
-            </p>
+          {/* Experiencia */}
+          <div className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all hover:shadow-md">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                  Experiencia
+                </h3>
+              </div>
+              <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
+                Psicólogos clínicos especializados, estamos siempre actualizados sobre los mejores tratamientos disponibles.
+              </p>
+            </div>
           </div>
 
         </div>
