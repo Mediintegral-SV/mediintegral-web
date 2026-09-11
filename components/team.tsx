@@ -1,3 +1,39 @@
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+
+const team = [
+  {
+    image: "/team-1.png",
+    name: "Lic. Johana Carolina Rivera Escalante",
+    specialty: "Psicóloga Infantil",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Johana%20Rivera",
+  },
+  {
+    image: "/team-2.png",
+    name: "Lic. Luis Eduardo Herrera",
+    specialty: "Psicólogo (Parejas y Adultos)",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Luis%20Eduardo%20Herrera",
+  },
+  {
+    image: "/team-3.png",
+    name: "Lic. Yaneth Sorto",
+    specialty: "Licenciada en Psicología",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Yaneth%20Sorto",
+  },
+  {
+    image: "/team-4.png",
+    name: "Lic. Karla Jovel",
+    specialty: "Psicología Clínica y Consejería",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Karla%20Jovel",
+  },
+  {
+    image: "/team-1.png",
+    name: "Lic. Francisco Javier Guevara Rojas",
+    specialty: "Especialista en Niños y Adolescentes",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Francisco%20Guevara",
+  },
+]
+
 export function Team() {
   return (
     <section id="nosotros" className="relative scroll-mt-16 overflow-hidden py-14 md:py-20 bg-emerald-950">
@@ -26,7 +62,7 @@ export function Team() {
           </p>
         </div>
 
-        {/* Cuadrícula optimizada */}
+        {/* Cuadrícula optimizada: 3 arriba y 2 abajo centrados */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {team.map((member, index) => (
             <article
