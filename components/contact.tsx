@@ -11,20 +11,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Correo",
-    value: "contacto@mediintegral.com",
-    href: "mailto:contacto@mediintegral.com",
+    value: "mediintegral.sv@gmail.com",
+    href: "mailto:mediintegral.sv@gmail.com",
   },
   {
     icon: MapPin,
     label: "Dirección",
-    value: "Colonia [Dirección], San Salvador, El Salvador",
+    value: "Av. Calle La Ceiba, Col. Escalón, Edif. Zona 49, Frente al Centro Comercial Vías Españolas, San Salvador",
     href: null,
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     value: "Escríbenos por WhatsApp",
-    href: "https://wa.me/50300000000",
+    href: "https://wa.me/50375687614?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios",
   },
 ]
 
@@ -58,6 +58,8 @@ export function Contact() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        target={item.label === "WhatsApp" ? "_blank" : undefined}
+                        rel={item.label === "WhatsApp" ? "noopener noreferrer" : undefined}
                         className="text-sm text-muted-foreground transition-colors hover:text-primary"
                       >
                         {item.value}
@@ -72,7 +74,13 @@ export function Contact() {
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-lg shadow-primary/5 md:p-8">
-            <form className="flex flex-col gap-5">
+            {/* 
+              Para que el formulario envíe los mensajes directo a tu Gmail (mediintegral.sv@gmail.com):
+              1. Entra a https://formspree.io/ y crea una cuenta gratuita.
+              2. Crea un nuevo formulario y copia tu endpoint (ej: https://formspree.io/f/tu-codigo).
+              3. Reemplaza "https://formspree.io/f/tu-codigo-aqui" abajo por tu enlace real.
+            */}
+            <form action="https://formspree.io/f/tu-codigo-aqui" method="POST" className="flex flex-col gap-5">
               <div className="flex flex-col gap-2">
                 <label htmlFor="nombre" className="text-sm font-medium text-foreground">
                   Nombre
@@ -81,6 +89,7 @@ export function Contact() {
                   id="nombre"
                   name="nombre"
                   type="text"
+                  required
                   placeholder="Tu nombre completo"
                   className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
@@ -94,6 +103,7 @@ export function Contact() {
                   id="telefono"
                   name="telefono"
                   type="tel"
+                  required
                   placeholder="+503 0000-0000"
                   className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
@@ -107,15 +117,16 @@ export function Contact() {
                   id="tipo"
                   name="tipo"
                   defaultValue=""
+                  required
                   className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
                 >
                   <option value="" disabled>
                     Selecciona una opción
                   </option>
-                  <option>Psicología Clínica (Adultos)</option>
-                  <option>Psicología Infantil y Adolescentes</option>
-                  <option>Terapia Familiar y de Pareja</option>
-                  <option>Evaluaciones Psicológicas</option>
+                  <option value="Psicología Clínica (Adultos)">Psicología Clínica (Adultos)</option>
+                  <option value="Psicología Infantil y Adolescentes">Psicología Infantil y Adolescentes</option>
+                  <option value="Terapia Familiar y de Pareja">Terapia Familiar y de Pareja</option>
+                  <option value="Evaluaciones Psicológicas">Evaluaciones Psicológicas</option>
                 </select>
               </div>
 
@@ -127,6 +138,7 @@ export function Contact() {
                   id="mensaje"
                   name="mensaje"
                   rows={4}
+                  required
                   placeholder="Cuéntanos brevemente cómo podemos ayudarte"
                   className="rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
