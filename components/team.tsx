@@ -17,6 +17,11 @@ const team = [
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
   },
+  {
+    image: "/team-4.png",
+    name: "Lic. Nombre Apellido",
+    specialty: "Psicólogo Clínico",
+  },
 ]
 
 export function Team() {
@@ -35,7 +40,7 @@ export function Team() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, index) => (
             <article
               key={index}
@@ -43,20 +48,20 @@ export function Team() {
             >
               <div className="aspect-[4/3] overflow-hidden bg-muted">
                 <Image
-                  src={member.image || "/placeholder.svg"}
+                  src={member.image}
                   alt={`Fotografía de ${member.name}`}
                   width={480}
                   height={360}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-col gap-3 p-6">
+              <div className="flex flex-col gap-4 p-6">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
                   <p className="text-sm text-primary">{member.specialty}</p>
                 </div>
-                <Button variant="outline" className="w-full">
-                  Ver Perfil
+                <Button asChild variant="outline" className="w-full">
+                  <a href="#contacto">Agendar con el especialista</a>
                 </Button>
               </div>
             </article>
