@@ -38,8 +38,11 @@ export function Benefits() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (
-            <div key={benefit.title} className="flex flex-col items-start gap-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <div 
+              key={benefit.title} 
+              className="flex flex-col items-start gap-4 rounded-2xl border border-border/60 bg-card p-6 shadow-sm transition-all hover:shadow-md"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <benefit.icon className="h-6 w-6" aria-hidden="true" />
               </span>
               <h3 className="text-lg font-semibold text-foreground text-balance">
