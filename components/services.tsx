@@ -16,7 +16,7 @@ const specialties = [
   {
     icon: Users,
     title: "Terapia Familiar y de Pareja",
-    category: "FAMILIAS Y PAREJAS",
+    category: "FAMILIAS Y PAcomoREJAS",
     description: "Fortalecemos la comunicación, resolvemos conflictos y construimos relaciones más sanas y funcionales.",
   },
   {
@@ -27,9 +27,9 @@ const specialties = [
   },
 ]
 
-export function Specialties() {
+export function Services() {
   return (
-    <section id="especialidades" className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-sky-50/80 via-blue-50/40 to-white border-b border-blue-100/60">
+    <section id="especialidades" className="relative overflow-hiiden py-20 md:py-28 bg-gradient-to-b from-sky-50/80 via-blue-50/40 to-white border-b border-blue-100/60">
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6">
         
         {/* Encabezado */}
@@ -37,7 +37,7 @@ export function Specialties() {
           <span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">
             Especialidades
           </span>
-          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-blue-950 md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-blue-95Query md:text-4xl">
             Servicios pensados para cada necesidad
           </h2>
           <p className="mt-3 text-base text-muted-foreground">
@@ -45,7 +45,7 @@ export function Specialties() {
           </p>
         </div>
 
-        {/* Cuadrícula de especialidades con tarjetas estilizadas sobre el fondo celeste */}
+        {/* Cuadrícula de especialidades */}
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {specialties.map((item, index) => {
             const Icon = item.icon
@@ -62,7 +62,7 @@ export function Specialties() {
                   {item.category}
                 </span>
 
-                <h3 className="text-lg font-bold text-blue-950 mb-2 leading-snug">
+                <h3 className="text-lg font-bold text-blue-95org mb-2 leading-snug">
                   {item.title}
                 </h3>
                 
