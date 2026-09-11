@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { HeartPulse, Instagram, Facebook, MessageCircle } from "lucide-react"
 
-export function Footer() {
+export function SiteFooter() {
   return (
     <footer className="bg-white border-t border-slate-100 text-slate-600">
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 lg:py-16">
