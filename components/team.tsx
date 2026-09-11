@@ -21,13 +21,13 @@ const team = [
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Yaneth%20Sorto",
   },
   {
-    image: "/team-4.png",
+    image: "/team-4.png", // <--- Corregido para que apunte correctamente a la imagen 4
     name: "Lic. Karla Jovel",
     specialty: "Psicología Clínica y Consejería",
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Karla%20Jovel",
   },
   {
-    image: "/team-1.png",
+    image: "/team-1.png", // Nota: Si tienes una foto 5, puedes cambiar esta ruta por /team-5.png cuando la subas
     name: "Lic. Francisco Javier Guevara Rojas",
     specialty: "Especialista en Niños y Adolescentes",
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Francisco%20Guevara",
