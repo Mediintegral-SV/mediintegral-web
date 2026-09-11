@@ -5,6 +5,7 @@ import { Team } from "@/components/team"
 import { Benefits } from "@/components/benefits"
 import { Contact } from "@/components/contact"
 import { SiteFooter } from "@/components/site-footer"
+import { FloatingContact } from "@/components/floating-contact" // <--- 1. Importas el botón flotante
 
 export default function Page() {
   return (
@@ -18,6 +19,9 @@ export default function Page() {
         <Contact />
       </main>
       <SiteFooter />
+      
+      {/* 2. Lo colocas aquí para que flote sobre toda la página sin estorbar */}
+      <FloatingContact />
     </div>
   )
 }
