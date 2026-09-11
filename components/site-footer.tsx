@@ -1,4 +1,4 @@
-import { HeartPulse, Send, Facebook, Globe } from "lucide-react"
+import { HeartPulse, Send, Globe, Share2 } from "lucide-react"
 
 const quickLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -11,12 +11,12 @@ const quickLinks = [
 const socials = [
   { 
     label: "Facebook", 
-    href: "https://www.facebook.com/share/1DyaUMbAgK/?mibextid=wwXIfr", 
-    icon: Facebook 
+    href: "https://www.facebook.com/share/1DyaUMbAgK/", 
+    icon: Share2 
   },
   { 
     label: "TikTok", 
-    href: "https://www.tiktok.com/@mediintegral?_r=1&_t=ZS-99dHpBlsNEe", 
+    href: "https://www.tiktok.com/@mediintegral", 
     icon: Globe 
   },
   { 
