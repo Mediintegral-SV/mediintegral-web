@@ -11,24 +11,19 @@ export function Hero() {
           
           {/* Columna de texto */}
           <div className="flex flex-col items-start space-y-6">
-            
-            {/* Etiqueta superior */}
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 shadow-sm">
               <ShieldCheck className="h-4 w-4 text-emerald-600" />
               <span>Espacio seguro y confidencial</span>
             </div>
 
-            {/* Título principal */}
             <h1 className="font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl leading-[1.1]">
               Atención Integral para tu <span className="text-emerald-700">Bienestar Emocional</span> y Mental
             </h1>
 
-            {/* Descripción */}
             <p className="text-base text-slate-600 md:text-lg leading-relaxed">
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
-            {/* Botones de acción */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-md transition-all">
                 <a href="https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
@@ -44,10 +39,9 @@ export function Hero() {
                 </Link>
               </Button>
             </div>
-
           </div>
 
-          {/* Columna de imagen / tarjeta flotante */}
+          {/* Columna de imagen */}
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-2xl">
               <div className="relative h-72 sm:h-80 w-full bg-slate-100">
@@ -61,7 +55,6 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
-              {/* Tarjeta flotante de estadística o confianza */}
               <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/95 p-4 backdrop-blur-md shadow-lg flex items-center gap-3">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
                   <Users className="h-5 w-5" />
@@ -73,7 +66,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Elemento decorativo de fondo */}
             <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-emerald-100/50 blur-3xl pointer-events-none" />
           </div>
 
