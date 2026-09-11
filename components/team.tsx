@@ -4,31 +4,31 @@ const teamMembers = [
   {
     name: "Lic. Johana Carolina Rivera Escalante",
     role: "Psicóloga Infantil",
-    image: "/team-1.jpg",
+    image: "/team-1.png",
     whatsapp: "50375687614",
   },
   {
     name: "Lic. Luis Eduardo Herrera",
     role: "Psicólogo (Parejas y Adultos)",
-    image: "/team-2.jpg",
+    image: "/team-2.png",
     whatsapp: "50375687614",
   },
   {
     name: "Lic. Yaneth Sorto",
     role: "Licenciada en Psicología",
-    image: "/team-3.jpg",
+    image: "/team-3.png",
     whatsapp: "50375687614",
   },
   {
     name: "Lic. Karla Jovel",
     role: "Psicología Clínica y Consejería",
-    image: "/team-4.jpg",
+    image: "/team-4.png",
     whatsapp: "50375687614",
   },
   {
     name: "Lic. Francisco Javier Guevara Rojas",
     role: "Especialista en Niños y Adolescentes",
-    image: "/team-5.jpg",
+    image: "/team-5.png",
     whatsapp: "50375687614",
   },
 ]
@@ -36,7 +36,7 @@ const teamMembers = [
 export function Team() {
   return (
     <section id="nosotros" className="relative py-20 md:py-28 overflow-hidden bg-slate-900 text-white">
-      {/* Fondo exclusivo de nature-bg.jpg con una ligera capa oscura transparente para que resalten los textos */}
+      {/* Fondo de naturaleza y capa oscura */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/nature-bg.jpg"
