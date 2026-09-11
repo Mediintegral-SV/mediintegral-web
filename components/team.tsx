@@ -50,11 +50,11 @@ export function Team() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         
-        {/* Cabecera con estilo de píldora flotante */}
+        {/* Cabecera con acento celeste del logo */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 shadow-lg backdrop-blur-md mb-4">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-300">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 shadow-lg backdrop-blur-md mb-4">
+            <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-200">
               Nuestro Equipo
             </span>
           </div>
@@ -71,7 +71,7 @@ export function Team() {
           {teamMembers.slice(0, 3).map((member, index) => (
             <div 
               key={index} 
-              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-emerald-500/10"
+              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-cyan-500/10"
             >
               <div>
                 <div className="relative h-56 w-full mb-5 overflow-hidden rounded-2xl bg-slate-100 shadow-inner">
@@ -83,14 +83,14 @@ export function Team() {
                   />
                 </div>
                 <h3 className="font-serif text-base font-bold text-slate-900 leading-snug">{member.name}</h3>
-                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-6">{member.role}</p>
+                <p className="text-xs font-semibold text-cyan-700 mt-1 mb-6">{member.role}</p>
               </div>
 
               <a
                 href={`https://wa.me/${member.whatsapp}?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20${encodeURIComponent(member.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
+                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-cyan-700 hover:bg-cyan-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
               >
                 <span>Agendar cita</span>
               </a>
@@ -103,7 +103,7 @@ export function Team() {
           {teamMembers.slice(3, 5).map((member, index) => (
             <div 
               key={index} 
-              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-emerald-500/10"
+              className="group flex flex-col justify-between rounded-3xl border border-white/15 bg-white/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-cyan-500/10"
             >
               <div>
                 <div className="relative h-56 w-full mb-5 overflow-hidden rounded-2xl bg-slate-100 shadow-inner">
@@ -115,14 +115,14 @@ export function Team() {
                   />
                 </div>
                 <h3 className="font-serif text-base font-bold text-slate-900 leading-snug">{member.name}</h3>
-                <p className="text-xs font-semibold text-emerald-700 mt-1 mb-6">{member.role}</p>
+                <p className="text-xs font-semibold text-cyan-700 mt-1 mb-6">{member.role}</p>
               </div>
 
               <a
                 href={`https://wa.me/${member.whatsapp}?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20${encodeURIComponent(member.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
+                className="w-full py-3 px-4 text-center text-xs font-bold tracking-wide text-white bg-cyan-700 hover:bg-cyan-800 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 group-hover:shadow-lg"
               >
                 <span>Agendar cita</span>
               </a>
