@@ -1,77 +1,80 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShieldCheck } from "lucide-react"
+import { ShieldCheck, Calendar, ArrowRight, Users } from "lucide-react"
 
 export function Hero() {
-  const whatsappUrl = "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta."
-
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-slate-950">
-      {/* Fondo sutil con degradado en tonos azules */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/nature-bg.jpg"
-          alt="Fondo natural"
-          fill
-          className="object-cover opacity-15"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/90 to-sky-100/80" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50/50">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           
-          {/* Textos y botones de la izquierda */}
-          <div className="flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-blue-100/90 px-3.5 py-1 text-xs font-semibold text-blue-800 border border-blue-300 shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-blue-600" />
-              Espacio seguro y confidencial
+          {/* Columna de texto */}
+          <div className="flex flex-col items-start space-y-6">
+            
+            {/* Etiqueta superior */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 shadow-sm">
+              <ShieldCheck className="h-4 w-4 text-emerald-600" />
+              <span>Espacio seguro y confidencial</span>
             </div>
 
-            <h1 className="mt-4 font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl leading-[1.1]">
-              Atención Integral para tu Bienestar Emocional y Mental
+            {/* Título principal */}
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl leading-[1.1]">
+              Atención Integral para tu <span className="text-emerald-700">Bienestar Emocional</span> y Mental
             </h1>
 
-            <p className="mt-4 text-base md:text-lg text-slate-700 leading-relaxed font-medium">
+            {/* Descripción */}
+            <p className="text-base text-slate-600 md:text-lg leading-relaxed">
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Button asChild size="lg" className="bg-blue-700 hover:bg-blue-800 text-white font-medium shadow-lg">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            {/* Botones de acción */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-md transition-all">
+                <a href="https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="mr-2 h-4 w-4" />
                   Agendar Consulta
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-blue-300 bg-white/60 text-slate-800 hover:bg-white">
-                <a href="#servicios">
+              
+              <Button asChild variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-medium">
+                <Link href="#servicios">
                   Conocer Servicios
-                </a>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
+
           </div>
 
-          {/* Imagen de la derecha */}
+          {/* Columna de imagen / tarjeta flotante */}
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-slate-100">
-              <Image
-                src="/hero-consultorio.jpg"
-                alt="Consultorio psicológico acogedor y seguro en Medintegral"
-                fill
-                priority
-                className="object-cover"
-              />
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-2xl">
+              <div className="relative h-72 sm:h-80 w-full bg-slate-100">
+                <Image
+                  src="/hero-consultorio.jpg"
+                  alt="Consultorio psicológico MediIntegral"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
+
+              {/* Tarjeta flotante de estadística o confianza */}
+              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/95 p-4 backdrop-blur-md shadow-lg flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+                  <Users className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-900">+10 Años</p>
+                  <p className="text-xs text-slate-500">Acompañando personas hacia su bienestar</p>
+                </div>
+              </div>
             </div>
 
-            {/* Tarjeta flotante decorativa */}
-            <div className="absolute -bottom-6 -left-6 sm:left-4 rounded-2xl bg-white/95 backdrop-blur-md p-4 shadow-xl border border-blue-100 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-800 font-bold text-lg">
-                +10
-              </div>
-              <div className="text-xs font-semibold text-slate-800 leading-tight">
-                Años <br />
-                <span className="text-slate-500 font-normal">acompañando personas</span>
-              </div>
-            </div>
+            {/* Elemento decorativo de fondo */}
+            <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-emerald-100/50 blur-3xl pointer-events-none" />
           </div>
 
         </div>
