@@ -74,13 +74,7 @@ export function Contact() {
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-lg shadow-primary/5 md:p-8">
-            {/* 
-              Para que el formulario envíe los mensajes directo a tu Gmail (mediintegral.sv@gmail.com):
-              1. Entra a https://formspree.io/ y crea una cuenta gratuita.
-              2. Crea un nuevo formulario y copia tu endpoint (ej: https://formspree.io/f/tu-codigo).
-              3. Reemplaza "https://formspree.io/f/tu-codigo-aqui" abajo por tu enlace real.
-            */}
-            <form action="https://formspree.io/f/tu-codigo-aqui" method="POST" className="flex flex-col gap-5">
+            <form action="https://formspree.io/f/xnpqwgwl" method="POST" className="flex flex-col gap-5">
               <div className="flex flex-col gap-2">
                 <label htmlFor="nombre" className="text-sm font-medium text-foreground">
                   Nombre
