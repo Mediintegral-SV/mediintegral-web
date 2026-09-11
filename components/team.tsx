@@ -6,21 +6,25 @@ const team = [
     image: "/team-1.png",
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Nombre%20Apellido",
   },
   {
     image: "/team-2.png",
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Nombre%20Apellido",
   },
   {
     image: "/team-3.png",
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Nombre%20Apellido",
   },
   {
     image: "/team-1.png", // Usando team-1 temporalmente mientras agregas la 4ta imagen
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
+    whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Nombre%20Apellido",
   },
 ]
 
@@ -61,7 +65,13 @@ export function Team() {
                   <p className="text-sm text-primary">{member.specialty}</p>
                 </div>
                 <Button asChild variant="outline" className="w-full">
-                  <a href="#contacto">Agendar con el especialista</a>
+                  <a 
+                    href={member.whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Agendar con el especialista
+                  </a>
                 </Button>
               </div>
             </article>
