@@ -5,7 +5,7 @@ import { Team } from "@/components/team"
 import { MissionVision } from "@/components/mission-vision" // <--- Importamos la nueva sección
 import { Contact } from "@/components/contact"
 import { SiteFooter } from "@/components/site-footer"
-import { FloatingContact } from "@/components/floating-contact"
+import { FloatingContact } from "@/components/floating-contact" 
 
 export default function Page() {
   return (
