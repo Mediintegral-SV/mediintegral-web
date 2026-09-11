@@ -1,5 +1,6 @@
-"use client" // Asegúrate de incluir esto al inicio si tu proyecto usa componentes de cliente de Next.js
+"use client"
 
+import { useState } from "react"
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -31,6 +32,17 @@ const contactInfo = [
 ]
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Si ya se está enviando, prevenimos envíos duplicados
+    if (isSubmitting) {
+      e.preventDefault()
+      return
+    }
+    setIsSubmitting(true)
+  }
+
   return (
     <section id="contacto" className="scroll-mt-16 bg-secondary/40 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
@@ -76,11 +88,16 @@ export function Contact() {
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-lg shadow-primary/5 md:p-8">
-            <form action="https://formspree.io/f/xnpqwgwl" method="POST" className="flex flex-col gap-5">
+            <form 
+              action="https://formspree.io/f/xnpqwgwl" 
+              method="POST" 
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-5"
+            >
               {/* Redirección tras el envío */}
               <input type="hidden" name="_next" value="https://mediintegral.com.sv/#contacto" />
               
-              {/* Campo trampa antispam (los bots lo llenan y Formspree los bloquea automáticamente) */}
+              {/* Campo trampa invisible para bots */}
               <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
               <div className="flex flex-col gap-2">
@@ -92,8 +109,9 @@ export function Contact() {
                   name="nombre"
                   type="text"
                   required
+                  disabled={isSubmitting}
                   placeholder="Tu nombre completo"
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
                 />
               </div>
 
@@ -106,8 +124,9 @@ export function Contact() {
                   name="telefono"
                   type="tel"
                   required
+                  disabled={isSubmitting}
                   placeholder="+503 0000-0000"
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
                 />
               </div>
 
@@ -120,7 +139,8 @@ export function Contact() {
                   name="tipo"
                   defaultValue=""
                   required
-                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  disabled={isSubmitting}
+                  className="h-11 rounded-lg border border-input bg-background px-4 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
                 >
                   <option value="" disabled>
                     Selecciona una opción
@@ -141,13 +161,14 @@ export function Contact() {
                   name="mensaje"
                   rows={4}
                   required
+                  disabled={isSubmitting}
                   placeholder="Cuéntanos brevemente cómo podemos ayudarte"
-                  className="rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  className="rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-50"
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Enviar Solicitud
+              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Enviando solicitud..." : "Enviar Solicitud"}
               </Button>
             </form>
           </div>
