@@ -1,4 +1,4 @@
-export function Mission() {
+export function MissionVision() {
   return (
     <section className="py-20 md:py-28 bg-slate-50/50">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
