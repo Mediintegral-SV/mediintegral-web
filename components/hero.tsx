@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShieldCheck, Calendar, ArrowRight, Users } from "lucide-react"
+import { ShieldCheck, Users } from "lucide-react"
 
 export function Hero() {
   return (
@@ -24,18 +24,17 @@ export function Hero() {
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
+            {/* Botones grandes con degradado verde */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button asChild size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-md transition-all">
+              <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium shadow-lg shadow-emerald-700/20 transition-all">
                 <a href="https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-4 w-4" />
                   Agendar Consulta
                 </a>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-medium">
+              <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-medium transition-all shadow-sm">
                 <Link href="#servicios">
                   Conocer Servicios
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
