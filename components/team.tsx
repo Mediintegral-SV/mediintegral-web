@@ -36,14 +36,18 @@ const team = [
 
 export function Team() {
   return (
-    <section id="nosotros" className="relative scroll-mt-16 overflow-hidden py-14 md:py-20 bg-slate-900">
-      {/* Fondo elegante en tonos oscuros/azules */}
+    <section id="nosotros" className="relative scroll-mt-16 overflow-hidden py-20 md:py-28 bg-slate-900">
+      
+      {/* Difuminado superior suave para conectar con la sección anterior */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none opacity-80" />
+
+      {/* Fondo elegante en tonos oscuros/azules con imagen */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/nature-bg.jpg"
           alt="Fondo natural"
           fill
-          className="object-cover opacity-25 brightness-90"
+          className="object-cover opacity-20 brightness-90"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/70 to-slate-950/90" />
       </div>
@@ -62,7 +66,7 @@ export function Team() {
         </div>
 
         {/* Cuadrícula uniforme */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {team.map((member, index) => (
             <article
               key={index}
@@ -98,6 +102,9 @@ export function Team() {
           ))}
         </div>
       </div>
+
+      {/* Difuminado inferior suave para conectar con la siguiente sección */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none opacity-80" />
     </section>
   )
 }
