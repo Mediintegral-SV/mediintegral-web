@@ -5,7 +5,7 @@ import { ShieldCheck, Users } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50/50">
+    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-emerald-50/40 via-white to-slate-50/60">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           
@@ -24,9 +24,9 @@ export function Hero() {
               Acompañamos tu proceso con psicología individual, familiar e infantil. Un enfoque humano y profesional para cada etapa de tu vida, en modalidad presencial y en línea.
             </p>
 
-            {/* Botones grandes con degradado verde */}
+            {/* Botones grandes sin iconos */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium shadow-lg shadow-emerald-700/20 transition-all">
+              <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-medium shadow-lg shadow-emerald-700/25 transition-all">
                 <a href="https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
                   Agendar Consulta
                 </a>
@@ -54,13 +54,14 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/95 p-4 backdrop-blur-md shadow-lg flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
-                  <Users className="h-5 w-5" />
+              {/* Tarjeta flotante original de +10 años */}
+              <div className="absolute bottom-4 left-4 rounded-2xl border border-white/20 bg-white/95 px-4 py-3 backdrop-blur-md shadow-lg flex items-center gap-3">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+                  <Users className="h-4 w-4" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-900">+10 Años</p>
-                  <p className="text-xs text-slate-500">Acompañando personas hacia su bienestar</p>
+                  <p className="text-[11px] text-slate-500">Acompañando personas hacia su bienestar</p>
                 </div>
               </div>
             </div>
