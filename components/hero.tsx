@@ -27,6 +27,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
+            {/* Asegúrate de que este href coincida con el id real de tu sección de servicios */}
             <Button asChild size="lg" variant="outline">
               <a href="#especialidades">Conocer Servicios</a>
             </Button>
@@ -40,6 +41,7 @@ export function Hero() {
               alt="Consultorio de psicología cómodo y acogedor con luz natural"
               width={720}
               height={720}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="h-full w-full object-cover"
               priority
             />
