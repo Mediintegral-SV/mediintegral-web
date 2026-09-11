@@ -5,19 +5,19 @@ import { ShieldCheck, Users } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-emerald-100/70 via-teal-50/50 to-emerald-50/80">
+    <section id="inicio" className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-cyan-100/70 via-teal-50/50 to-cyan-50/80">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           
           {/* Columna de texto */}
           <div className="flex flex-col items-start space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-emerald-600" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-3.5 py-1.5 text-xs font-semibold text-cyan-700 shadow-sm">
+              <ShieldCheck className="h-4 w-4 text-cyan-600" />
               <span>Espacio seguro y confidencial</span>
             </div>
 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl leading-[1.1]">
-              Atención Integral para tu <span className="text-emerald-700">Bienestar Emocional</span> y Mental
+              Atención Integral para tu <span className="text-cyan-700">Bienestar Emocional</span> y Mental
             </h1>
 
             <p className="text-base text-slate-600 md:text-lg leading-relaxed">
@@ -26,13 +26,13 @@ export function Hero() {
 
             {/* Botones grandes sin iconos */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-medium shadow-lg shadow-emerald-700/25 transition-all">
+              <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-to-r from-cyan-600 via-cyan-700 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-medium shadow-lg shadow-cyan-700/25 transition-all">
                 <a href="https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
                   Agendar Consulta
                 </a>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50/80 font-medium transition-all shadow-sm">
+              <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base border-2 border-cyan-600 text-cyan-700 hover:bg-cyan-50/80 font-medium transition-all shadow-sm">
                 <Link href="#servicios">
                   Conocer Servicios
                 </Link>
@@ -54,9 +54,9 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
-              {/* Tarjeta flotante original de +10 años */}
+              {/* Tarjeta flotante de +10 años */}
               <div className="absolute bottom-4 left-4 rounded-2xl border border-white/20 bg-white/95 px-4 py-3 backdrop-blur-md shadow-lg flex items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700">
                   <Users className="h-4 w-4" />
                 </div>
                 <div>
@@ -66,7 +66,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-emerald-200/60 blur-3xl pointer-events-none" />
+            <div className="absolute -top-6 -right-6 -z-10 h-72 w-72 rounded-full bg-cyan-200/60 blur-3xl pointer-events-none" />
           </div>
 
         </div>
