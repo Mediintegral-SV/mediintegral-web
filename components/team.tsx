@@ -18,7 +18,7 @@ const team = [
     specialty: "Psicólogo Clínico",
   },
   {
-    image: "/team-4.png",
+    image: "/team-1.png", // Usando team-1 temporalmente mientras agregas la 4ta imagen
     name: "Lic. Nombre Apellido",
     specialty: "Psicólogo Clínico",
   },
