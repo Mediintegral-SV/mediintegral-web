@@ -21,13 +21,13 @@ const team = [
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Yaneth%20Sorto",
   },
   {
-    image: "/team-4.png", // <--- Asegúrate de guardar la nueva foto con este nombre (team-4.png) en la carpeta public/
+    image: "/team-4.png", // La foto de la Lic. Karla Jovel
     name: "Lic. Karla Jovel",
     specialty: "Psicología Clínica y Consejería",
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20la%20Lic.%20Karla%20Jovel",
   },
   {
-    image: "/team-1.png", // Cambia esto por /team-5.png si subes la foto del Lic. Francisco
+    image: "/team-1.png", // Cambia a /team-5.png si tienes la foto del Lic. Francisco
     name: "Lic. Francisco Javier Guevara Rojas",
     specialty: "Especialista en Niños y Adolescentes",
     whatsappUrl: "https://wa.me/50375687614?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20el%20Lic.%20Francisco%20Guevara",
@@ -61,22 +61,22 @@ export function Team() {
           </p>
         </div>
 
-        {/* Cuadrícula optimizada: 3 arriba y 2 abajo centrados */}
+        {/* Cuadrícula uniforme: 3 arriba y 2 abajo centrados con el mismo ancho */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {team.map((member, index) => (
             <article
               key={index}
-              className={`flex flex-col overflow-hidden rounded-2xl border border-emerald-500/30 bg-white/95 backdrop-blur-md shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-3xl ${
-                index >= 3 ? "lg:max-w-none lg:col-span-1 lg:mx-auto sm:col-span-1" : ""
+              className={`flex flex-col overflow-hidden rounded-2xl border border-emerald-500/30 bg-white/95 backdrop-blur-md shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-3xl w-full ${
+                index >= 3 ? "lg:col-span-1 sm:col-span-1" : ""
               }`}
             >
-              {/* Contenedor de imagen con tamaño estricto y centrado inteligente */}
-              <div className="aspect-[4/3] overflow-hidden bg-slate-100 relative">
+              {/* Contenedor de imagen con altura fija idéntica para TODAS las tarjetas */}
+              <div className="h-64 w-full overflow-hidden bg-slate-100 relative">
                 <Image
                   src={member.image}
                   alt={`Fotografía de ${member.name}`}
                   fill
-                  className="object-cover object-top" // <--- Esto ajusta y alinea todas las fotos perfectamente enfocando los rostros
+                  className="object-cover object-top"
                 />
               </div>
 
