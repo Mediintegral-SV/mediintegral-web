@@ -16,7 +16,7 @@ const services = [
     icon: Smile,
     title: "Psicología Infantil y Adolescentes",
     category: "NIÑOS Y JÓVENES",
-    description: "Apoyo especializado para el desarrollo emocional, conductual y escolar de niños, niños y adolescentes.",
+    description: "Apoyo especializado para el desarrollo emocional, conductual y escolar de niños y adolescentes.",
   },
   {
     icon: Users,
@@ -39,13 +39,14 @@ export function Services() {
         
         {/* Encabezado */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-700 bg-cyan-500/10 border border-cyan-500/20 px-4 py-1.5 rounded-full shadow-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 animate-pulse" />
             Especialidades
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
             Servicios pensados para cada necesidad
           </h2>
-          <p className="mt-2 text-sm md:text-base text-slate-600">
+          <p className="mt-3 text-sm md:text-base text-slate-600">
             Un equipo multidisciplinario listo para acompañarte en cada momento de tu vida.
           </p>
         </div>
@@ -57,13 +58,13 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative flex flex-col justify-between rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-emerald-200"
+                className="group relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-cyan-500/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-400"
               >
                 <div>
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700 transition-colors group-hover:bg-emerald-700 group-hover:text-white mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-50 text-cyan-700 transition-colors group-hover:bg-cyan-700 group-hover:text-white mb-4 shadow-sm">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <span className="text-[10px] font-bold tracking-wider uppercase text-emerald-600/80">
+                  <span className="text-[10px] font-bold tracking-wider uppercase text-cyan-600/90">
                     {service.category}
                   </span>
                   <h3 className="mt-1 font-serif text-lg font-bold text-slate-900">
