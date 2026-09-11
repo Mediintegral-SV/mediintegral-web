@@ -35,30 +35,30 @@ const teamMembers = [
 
 export function Team() {
   return (
-    <section id="nosotros" className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-[#1b4d3e] via-[#13382c] to-[#1b4d3e] text-white">
-      {/* Fondo nature-bg.jpg con opacidad suave */}
+    <section id="nosotros" className="relative py-20 md:py-28 overflow-hidden bg-slate-900 text-white">
+      {/* Fondo exclusivo de nature-bg.jpg con una ligera capa oscura transparente para que resalten los textos */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/nature-bg.jpg"
           alt="Fondo natural MediIntegral"
           fill
-          className="object-cover object-center opacity-20"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1b4d3e]/85 via-[#13382c]/80 to-[#1b4d3e]/90" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6">
         
         {/* Cabecera */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-200 bg-emerald-900/60 px-4 py-1.5 rounded-full border border-emerald-600/40 shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-300 bg-black/40 px-4 py-1.5 rounded-full border border-emerald-500/40 shadow-sm backdrop-blur-md">
             Nuestro Equipo
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-white md:text-4xl drop-shadow-md">
             Licenciados que te acompañan
           </h2>
-          <p className="mt-2 text-sm md:text-base text-emerald-100/90">
+          <p className="mt-2 text-sm md:text-base text-slate-200 drop-shadow">
             Profesionales certificados y comprometidos con tu bienestar integral.
           </p>
         </div>
@@ -68,7 +68,7 @@ export function Team() {
           {teamMembers.slice(0, 3).map((member, index) => (
             <div 
               key={index} 
-              className="flex flex-col justify-between rounded-2xl border border-emerald-600/30 bg-white p-5 shadow-xl transition-all hover:border-emerald-500"
+              className="flex flex-col justify-between rounded-2xl border border-white/20 bg-white p-5 shadow-2xl transition-all hover:border-emerald-500"
             >
               <div>
                 <div className="relative h-48 w-full mb-4 overflow-hidden rounded-xl bg-slate-100">
@@ -100,7 +100,7 @@ export function Team() {
           {teamMembers.slice(3, 5).map((member, index) => (
             <div 
               key={index} 
-              className="flex flex-col justify-between rounded-2xl border border-emerald-600/30 bg-white p-5 shadow-xl transition-all hover:border-emerald-500"
+              className="flex flex-col justify-between rounded-2xl border border-white/20 bg-white p-5 shadow-2xl transition-all hover:border-emerald-500"
             >
               <div>
                 <div className="relative h-48 w-full mb-4 overflow-hidden rounded-xl bg-slate-100">
