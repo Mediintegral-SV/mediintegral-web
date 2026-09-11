@@ -3,9 +3,8 @@ export function MissionVision() {
     <section className="py-16 md:py-24 bg-white">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         
-        {/* Encabezado */}
         <div className="mx-auto max-w-2xl text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1.5 rounded-full border border-emerald-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
             Nuestra Filosofía
           </span>
           <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -16,13 +15,11 @@ export function MissionVision() {
           </p>
         </div>
 
-        {/* Cuadrícula de Misión, Visión, Promesa y Experiencia */}
         <div className="grid gap-8 md:grid-cols-2">
           
-          {/* Misión */}
-          <div className="rounded-3xl border border-emerald-100 bg-emerald-50/40 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-emerald-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-600"></span>
+          <div className="rounded-3xl border border-blue-100 bg-blue-50/40 p-8 shadow-sm transition-all hover:shadow-md">
+            <h3 className="font-serif text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
               MISIÓN
             </h3>
             <p className="text-slate-700 leading-relaxed text-base">
@@ -30,10 +27,9 @@ export function MissionVision() {
             </p>
           </div>
 
-          {/* Visión */}
-          <div className="rounded-3xl border border-emerald-100 bg-emerald-50/40 p-8 shadow-sm transition-all hover:shadow-md">
-            <h3 className="font-serif text-xl font-bold text-emerald-900 mb-3 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-600"></span>
+          <div className="rounded-3xl border border-blue-100 bg-blue-50/40 p-8 shadow-sm transition-all hover:shadow-md">
+            <h3 className="font-serif text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
               VISIÓN
             </h3>
             <p className="text-slate-700 leading-relaxed text-base">
@@ -41,7 +37,6 @@ export function MissionVision() {
             </p>
           </div>
 
-          {/* Nuestra Promesa */}
           <div className="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 shadow-sm transition-all hover:shadow-md">
             <h3 className="font-serif text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
@@ -52,7 +47,6 @@ export function MissionVision() {
             </p>
           </div>
 
-          {/* Experiencia */}
           <div className="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 shadow-sm transition-all hover:shadow-md">
             <h3 className="font-serif text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-slate-500"></span>
