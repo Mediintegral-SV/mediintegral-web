@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 const teamMembers = [
-  {
+  { 
     name: "Lic. Johana Carolina Rivera Escalante",
     role: "Psicóloga Infantil",
     image: "/team-1.png",
